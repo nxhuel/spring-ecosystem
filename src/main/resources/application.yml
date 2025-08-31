@@ -1,0 +1,63 @@
+server:
+    port: 8080
+spring:
+  profiles:
+    active:
+    - dev
+---
+spring:
+    config:
+      activate:
+        on-profile: dev
+    application:
+        name: restfull-api
+    datasource:
+        password: root
+        url: jdbc:mysql://localhost:3306/restfull_api
+        username: root
+    jpa:
+        hibernate:
+            ddl-auto: create-drop
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.MySQL8Dialect
+                format-sql: true
+        show-sql: true
+---
+spring:
+    config:
+      activate:
+        on-profile: qa
+    application:
+        name: restfull-api
+    datasource:
+        password: root
+        url: jdbc:mysql://localhost:3306/restfull_api_qa
+        username: root
+    jpa:
+        hibernate:
+            ddl-auto: create-drop
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.MySQL8Dialect
+                format-sql: true
+        show-sql: true
+---
+spring:
+    config:
+      activate:
+        on-profile: prod
+    application:
+        name: restfull-api
+    datasource:
+        password: root
+        url: jdbc:mysql://localhost:3306/restfull_api_prod
+        username: root
+    jpa:
+        hibernate:
+            ddl-auto: create-drop
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.MySQL8Dialect
+                format-sql: true
+        show-sql: true

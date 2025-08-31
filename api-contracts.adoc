@@ -1,0 +1,36 @@
+### Contrato
+```
+request
+	HTTP Verb: GET
+	URI: /api/v1/local
+	Body: None
+response
+	HTTP Status:
+		200 OK if the user is authorized and the Cash Card was successfully retrieved
+		401 UNAUTHORIZED if the user is unauthenticated or unauthorized
+		404 NOT FOUND if the user is authenticated and authorized but the Cash Card cannot be found
+	Body Type: JSON
+	Body:
+	    {
+	      "id": 99,
+	      "amount": 123.45
+	    }
+```
+
+```
+request
+	HTTP Verb: GET
+	URI: /api/v1/local
+	Body: None
+response
+	HTTP Status:
+		200 OK if the user is authorized and the Cash Card was successfully retrieved
+		401 UNAUTHORIZED if the user is unauthenticated or unauthorized
+		404 NOT FOUND if the user is authenticated and authorized but the Cash Card cannot be found
+	Body Type: JSON
+	Body:
+	    {
+	      "id": 99,
+	      "amount": 123.45
+	    }
+```
