@@ -11,6 +11,9 @@ spring:
         on-profile: dev
     application:
         name: restfull-api
+        security:
+         jwt:
+          secret-key: pECEGAhMvddPDrXzZPNQAArRzkJ4SP3I1LfxA1tUQNm1s6hnUHQIMDmdTIq1dcko
     datasource:
         password: root
         url: jdbc:mysql://localhost:3306/restfull_api
