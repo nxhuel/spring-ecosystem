@@ -11,10 +11,13 @@ spring:
         on-profile: dev
     application:
         name: restfull-api
+    jackson:
+        default-property-inclusion: NON_NULL
+        property-naming-strategy: SNAKE_CASE
     datasource:
-        password: root
-        url: jdbc:mysql://localhost:3306/restfull_api
-        username: root
+        password: ${DB_PASSWORD}
+        url: ${DB_HOST}
+        username: ${DB_USER}
     jpa:
         hibernate:
             ddl-auto: create-drop
