@@ -1,4 +1,4 @@
-package com.nxhu.restfull_api.product.infraestructure.adapter.input.rest;
+package com.nxhu.restfull_api.product.infrastructure.adapters.input.rest;
 
 import java.util.List;
 
@@ -13,12 +13,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.nxhu.restfull_api.product.application.port.input.ProductServicePort;
+import com.nxhu.restfull_api.product.application.ports.input.ProductServicePort;
 import com.nxhu.restfull_api.product.domain.exception.ProductNotFoundException;
 import com.nxhu.restfull_api.product.domain.model.ProductModel;
-import com.nxhu.restfull_api.product.infraestructure.adapter.input.rest.mapper.ProductRestMapper;
-import com.nxhu.restfull_api.product.infraestructure.adapter.input.rest.model.request.ProductCreateRequest;
-import com.nxhu.restfull_api.product.infraestructure.adapter.input.rest.model.response.ProductResponse;
+import com.nxhu.restfull_api.product.infrastructure.adapters.input.rest.mapper.ProductRestMapper;
+import com.nxhu.restfull_api.product.infrastructure.adapters.input.rest.model.request.ProductCreateRequest;
+import com.nxhu.restfull_api.product.infrastructure.adapters.input.rest.model.response.ProductResponse;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

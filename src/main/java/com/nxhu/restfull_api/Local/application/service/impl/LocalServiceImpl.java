@@ -1,13 +1,13 @@
-package com.nxhu.restfull_api.Local.application.service.impl;
+package com.nxhu.restfull_api.local.application.service.impl;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.nxhu.restfull_api.Local.application.ports.input.LocalServicePort;
-import com.nxhu.restfull_api.Local.application.ports.output.LocalPersistencePort;
-import com.nxhu.restfull_api.Local.domain.exception.LocalNotFoundException;
-import com.nxhu.restfull_api.Local.domain.model.LocalModel;
+import com.nxhu.restfull_api.local.application.ports.input.LocalServicePort;
+import com.nxhu.restfull_api.local.application.ports.output.LocalPersistencePort;
+import com.nxhu.restfull_api.local.domain.exception.LocalNotFoundException;
+import com.nxhu.restfull_api.local.domain.model.LocalModel;
 
 import lombok.RequiredArgsConstructor;
 

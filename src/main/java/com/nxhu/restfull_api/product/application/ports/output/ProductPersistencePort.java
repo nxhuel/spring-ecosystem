@@ -1,4 +1,4 @@
-package com.nxhu.restfull_api.product.application.port.output;
+package com.nxhu.restfull_api.product.application.ports.output;
 
 import java.util.List;
 import java.util.Optional;

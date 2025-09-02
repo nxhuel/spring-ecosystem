@@ -1,4 +1,4 @@
-package com.nxhu.restfull_api.Local.infrastructure.adapters.input.rest.model.request;
+package com.nxhu.restfull_api.local.infrastructure.adapters.input.rest.model.request;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;

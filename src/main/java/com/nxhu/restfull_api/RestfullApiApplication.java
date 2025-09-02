@@ -7,10 +7,10 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.nxhu.restfull_api.Local.infrastructure.adapters.output.persistence.entity.LocalEntity;
-import com.nxhu.restfull_api.Local.infrastructure.adapters.output.persistence.repository.LocalRepository;
-import com.nxhu.restfull_api.product.infraestructure.adapter.ouput.persistence.entity.ProductEntity;
-import com.nxhu.restfull_api.product.infraestructure.adapter.ouput.persistence.repository.ProductRepository;
+import com.nxhu.restfull_api.local.infrastructure.adapters.output.persistence.entity.LocalEntity;
+import com.nxhu.restfull_api.local.infrastructure.adapters.output.persistence.repository.LocalRepository;
+import com.nxhu.restfull_api.product.infrastructure.adapters.output.persistence.entity.ProductEntity;
+import com.nxhu.restfull_api.product.infrastructure.adapters.output.persistence.repository.ProductRepository;
 
 import lombok.RequiredArgsConstructor;
 

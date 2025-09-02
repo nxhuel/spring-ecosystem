@@ -1,4 +1,4 @@
-package com.nxhu.restfull_api.Local.domain.model;
+package com.nxhu.restfull_api.local.domain.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

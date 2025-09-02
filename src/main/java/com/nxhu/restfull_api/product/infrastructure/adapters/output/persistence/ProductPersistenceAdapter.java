@@ -1,14 +1,14 @@
-package com.nxhu.restfull_api.product.infraestructure.adapter.ouput.persistence;
+package com.nxhu.restfull_api.product.infrastructure.adapters.output.persistence;
 
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Component;
 
-import com.nxhu.restfull_api.product.application.port.output.ProductPersistencePort;
+import com.nxhu.restfull_api.product.application.ports.output.ProductPersistencePort;
 import com.nxhu.restfull_api.product.domain.model.ProductModel;
-import com.nxhu.restfull_api.product.infraestructure.adapter.ouput.persistence.mapper.ProductPersistenceMapper;
-import com.nxhu.restfull_api.product.infraestructure.adapter.ouput.persistence.repository.ProductRepository;
+import com.nxhu.restfull_api.product.infrastructure.adapters.output.persistence.mapper.ProductPersistenceMapper;
+import com.nxhu.restfull_api.product.infrastructure.adapters.output.persistence.repository.ProductRepository;
 
 import lombok.RequiredArgsConstructor;
 

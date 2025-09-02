@@ -1,4 +1,4 @@
-package com.nxhu.restfull_api.product.infraestructure.adapter.input.rest.model.request;
+package com.nxhu.restfull_api.product.infrastructure.adapters.input.rest.model.request;
 
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;

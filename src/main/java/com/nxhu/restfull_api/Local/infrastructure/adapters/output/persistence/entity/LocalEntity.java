@@ -1,4 +1,4 @@
-package com.nxhu.restfull_api.Local.infrastructure.adapters.output.persistence.entity;
+package com.nxhu.restfull_api.local.infrastructure.adapters.output.persistence.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

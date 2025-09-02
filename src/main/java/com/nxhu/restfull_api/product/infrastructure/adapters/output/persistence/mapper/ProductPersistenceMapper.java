@@ -1,11 +1,11 @@
-package com.nxhu.restfull_api.product.infraestructure.adapter.ouput.persistence.mapper;
+package com.nxhu.restfull_api.product.infrastructure.adapters.output.persistence.mapper;
 
 import java.util.List;
 
 import org.mapstruct.Mapper;
 
 import com.nxhu.restfull_api.product.domain.model.ProductModel;
-import com.nxhu.restfull_api.product.infraestructure.adapter.ouput.persistence.entity.ProductEntity;
+import com.nxhu.restfull_api.product.infrastructure.adapters.output.persistence.entity.ProductEntity;
 
 @Mapper(componentModel = "spring")
 public interface ProductPersistenceMapper {

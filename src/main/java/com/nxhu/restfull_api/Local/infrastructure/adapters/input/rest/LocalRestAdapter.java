@@ -1,4 +1,4 @@
-package com.nxhu.restfull_api.Local.infrastructure.adapters.input.rest;
+package com.nxhu.restfull_api.local.infrastructure.adapters.input.rest;
 
 import java.util.List;
 
@@ -13,12 +13,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.nxhu.restfull_api.Local.application.ports.input.LocalServicePort;
-import com.nxhu.restfull_api.Local.domain.exception.LocalNotFoundException;
-import com.nxhu.restfull_api.Local.domain.model.LocalModel;
-import com.nxhu.restfull_api.Local.infrastructure.adapters.input.rest.mapper.LocalRestMapper;
-import com.nxhu.restfull_api.Local.infrastructure.adapters.input.rest.model.request.LocalCreateRequest;
-import com.nxhu.restfull_api.Local.infrastructure.adapters.input.rest.model.response.LocalResponse;
+import com.nxhu.restfull_api.local.application.ports.input.LocalServicePort;
+import com.nxhu.restfull_api.local.domain.exception.LocalNotFoundException;
+import com.nxhu.restfull_api.local.domain.model.LocalModel;
+import com.nxhu.restfull_api.local.infrastructure.adapters.input.rest.mapper.LocalRestMapper;
+import com.nxhu.restfull_api.local.infrastructure.adapters.input.rest.model.request.LocalCreateRequest;
+import com.nxhu.restfull_api.local.infrastructure.adapters.input.rest.model.response.LocalResponse;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

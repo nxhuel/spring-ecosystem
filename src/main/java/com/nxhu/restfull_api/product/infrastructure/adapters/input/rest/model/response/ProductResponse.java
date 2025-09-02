@@ -1,4 +1,4 @@
-package com.nxhu.restfull_api.product.infraestructure.adapter.input.rest.model.response;
+package com.nxhu.restfull_api.product.infrastructure.adapters.input.rest.model.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

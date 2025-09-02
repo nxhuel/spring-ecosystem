@@ -1,9 +1,9 @@
-package com.nxhu.restfull_api.Local.application.ports.output;
+package com.nxhu.restfull_api.local.application.ports.output;
 
 import java.util.List;
 import java.util.Optional;
 
-import com.nxhu.restfull_api.Local.domain.model.LocalModel;
+import com.nxhu.restfull_api.local.domain.model.LocalModel;
 
 // operaciones necesarias para persistir
 public interface LocalPersistencePort {

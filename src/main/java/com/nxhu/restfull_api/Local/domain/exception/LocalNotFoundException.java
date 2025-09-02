@@ -1,4 +1,4 @@
-package com.nxhu.restfull_api.Local.domain.exception;
+package com.nxhu.restfull_api.local.domain.exception;
 
 public class LocalNotFoundException extends Exception {
 	/**

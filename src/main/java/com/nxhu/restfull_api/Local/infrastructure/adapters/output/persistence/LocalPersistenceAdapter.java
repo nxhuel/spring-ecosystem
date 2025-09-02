@@ -1,14 +1,14 @@
-package com.nxhu.restfull_api.Local.infrastructure.adapters.output.persistence;
+package com.nxhu.restfull_api.local.infrastructure.adapters.output.persistence;
 
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Component;
 
-import com.nxhu.restfull_api.Local.application.ports.output.LocalPersistencePort;
-import com.nxhu.restfull_api.Local.domain.model.LocalModel;
-import com.nxhu.restfull_api.Local.infrastructure.adapters.output.persistence.mapper.LocalPersistenceMapper;
-import com.nxhu.restfull_api.Local.infrastructure.adapters.output.persistence.repository.LocalRepository;
+import com.nxhu.restfull_api.local.application.ports.output.LocalPersistencePort;
+import com.nxhu.restfull_api.local.domain.model.LocalModel;
+import com.nxhu.restfull_api.local.infrastructure.adapters.output.persistence.mapper.LocalPersistenceMapper;
+import com.nxhu.restfull_api.local.infrastructure.adapters.output.persistence.repository.LocalRepository;
 
 import lombok.RequiredArgsConstructor;
 

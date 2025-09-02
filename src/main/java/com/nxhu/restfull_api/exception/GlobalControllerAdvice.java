@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-import com.nxhu.restfull_api.Local.domain.exception.LocalNotFoundException;
-import com.nxhu.restfull_api.Local.infrastructure.adapters.input.rest.model.response.ErrorResponse;
+import com.nxhu.restfull_api.local.domain.exception.LocalNotFoundException;
+import com.nxhu.restfull_api.local.infrastructure.adapters.input.rest.model.response.ErrorResponse;
 import com.nxhu.restfull_api.product.domain.exception.ProductNotFoundException;
 
 @ControllerAdvice

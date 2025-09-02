@@ -4,8 +4,8 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.nxhu.restfull_api.product.application.port.input.ProductServicePort;
-import com.nxhu.restfull_api.product.application.port.output.ProductPersistencePort;
+import com.nxhu.restfull_api.product.application.ports.input.ProductServicePort;
+import com.nxhu.restfull_api.product.application.ports.output.ProductPersistencePort;
 import com.nxhu.restfull_api.product.domain.exception.ProductNotFoundException;
 import com.nxhu.restfull_api.product.domain.model.ProductModel;
 

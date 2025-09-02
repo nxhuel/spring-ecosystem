@@ -1,9 +1,9 @@
-package com.nxhu.restfull_api.Local.application.ports.input;
+package com.nxhu.restfull_api.local.application.ports.input;
 
 import java.util.List;
 
-import com.nxhu.restfull_api.Local.domain.exception.LocalNotFoundException;
-import com.nxhu.restfull_api.Local.domain.model.LocalModel;
+import com.nxhu.restfull_api.local.domain.exception.LocalNotFoundException;
+import com.nxhu.restfull_api.local.domain.model.LocalModel;
 
 // casos de uso de Local
 public interface LocalServicePort {
