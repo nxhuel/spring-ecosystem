@@ -1,4 +1,4 @@
-package com.nxhu.restfull_api.Local.infrastructure.adapters.input.rest;
+package com.nxhu.restfull_api.exception;
 
 import java.net.http.HttpHeaders;
 import java.time.LocalDateTime;
@@ -16,10 +16,12 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 
 import com.nxhu.restfull_api.Local.domain.exception.LocalNotFoundException;
 import com.nxhu.restfull_api.Local.infrastructure.adapters.input.rest.model.response.ErrorResponse;
+import com.nxhu.restfull_api.product.domain.exception.ProductNotFoundException;
 
 @ControllerAdvice
 public class GlobalControllerAdvice extends ResponseEntityExceptionHandler {
 
+//	slice local
 	@ExceptionHandler(LocalNotFoundException.class)
 	@ResponseStatus(HttpStatus.NOT_FOUND)
 	public ResponseEntity<ErrorResponse> localNotFoundException(LocalNotFoundException exception) {
@@ -27,7 +29,22 @@ public class GlobalControllerAdvice extends ResponseEntityExceptionHandler {
 				.details(List.of()).timestamp(LocalDateTime.now()).build();
 		return new ResponseEntity<>(message, HttpStatus.NOT_FOUND);
 	}
-
+	
+//	slice product
+	@ExceptionHandler(ProductNotFoundException.class)
+	@ResponseStatus(HttpStatus.NOT_FOUND)
+	public ResponseEntity<ErrorResponse> productNotFoundException(ProductNotFoundException productNotFoundException) {
+		ErrorResponse message = ErrorResponse.builder()
+				.status(HttpStatus.NOT_FOUND)
+				.message(productNotFoundException.getMessage())
+				.details(List.of())
+				.timestamp(LocalDateTime.now())
+				.build();
+		
+		return new ResponseEntity<>(message, HttpStatus.NOT_FOUND); 
+	}
+	
+//	global
 	protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex,
 			HttpHeaders headers, HttpStatusCode status, WebRequest request) {
 

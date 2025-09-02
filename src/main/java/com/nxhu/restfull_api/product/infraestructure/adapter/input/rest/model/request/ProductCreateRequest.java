@@ -21,5 +21,5 @@ public class ProductCreateRequest {
 
 	@NotNull(message = "Product price must not be null")
 	@Min(value = 10, message = "The price of the product must be greater than 10")
-	private float price;
+	private double price;
 }
