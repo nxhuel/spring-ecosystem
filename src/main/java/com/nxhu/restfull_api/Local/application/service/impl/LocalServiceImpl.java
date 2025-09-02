@@ -13,7 +13,7 @@ import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
-public class StudentServiceImpl implements LocalServicePort {
+public class LocalServiceImpl implements LocalServicePort {
 	
 	private final LocalPersistencePort localPersistencePort;
 
@@ -36,10 +36,10 @@ public class StudentServiceImpl implements LocalServicePort {
 	@Override
 	public LocalModel updateLocalById(Long id, LocalModel localModel) throws LocalNotFoundException {		
 		return localPersistencePort.findById(id)
-				.map(savedStudent -> {
-					savedStudent.setName(localModel.getName());
-					savedStudent.setFloor(localModel.getFloor());
-					return localPersistencePort.save(savedStudent);
+				.map(savedProduct -> {
+					savedProduct.setName(localModel.getName());
+					savedProduct.setFloor(localModel.getFloor());
+					return localPersistencePort.save(savedProduct);
 				})
 				.orElseThrow(() -> new LocalNotFoundException("Local with ID " + id + " not found"));
 	}
