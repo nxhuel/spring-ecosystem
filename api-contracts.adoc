@@ -1,36 +1,268 @@
-### Contrato
+### Contrato API REST
+
+Indice
+
+- <<slice-local, slice /local>> 
+- <<slice-product, slice /product>> 
+
+[[slice-local]]
+*slice /local*
+
+_Obtener lista de locales_
 ```
 request
 	HTTP Verb: GET
-	URI: /api/v1/local
+	URL: /local/v1/api
 	Body: None
 response
 	HTTP Status:
-		200 OK if the user is authorized and the Cash Card was successfully retrieved
-		401 UNAUTHORIZED if the user is unauthenticated or unauthorized
-		404 NOT FOUND if the user is authenticated and authorized but the Cash Card cannot be found
+		200 OK si existen usuarios que mostrar (aunque este vacio)
 	Body Type: JSON
 	Body:
+	[
 	    {
-	      "id": 99,
-	      "amount": 123.45
+	        "id": 1,
+	        "name": "Bazar general",
+	        "floor": "Piso 1"
+	    },
+	    {
+	        "id": 2,
+	        "name": "Bazar limpieza",
+	        "floor": "Piso 2"
 	    }
+	]
+```
+_Obtener local por ID_
+```
+Request
+    HTTP Verb: GET
+    URL: /local/v1/api/{id}
+    Body: None
+
+Response
+    HTTP Status:
+        200 OK si el local existe
+        404 NOT FOUND si no existe un local con ese ID
+    Body Type: JSON
+    Body:
+    {
+        "id": 1,
+        "name": "Bazar general",
+        "floor": "Piso 1"
+    }
+```
+_Crear nuevo local_
+```
+Request
+    HTTP Verb: POST
+    URL: /local/v1/api
+    Headers: Content-Type: application/json
+    Body Type: JSON
+    Body:
+    {
+        "name": "Bazar cocina",
+        "floor": "Piso 3"
+    }
+
+Response
+    HTTP Status:
+        201 CREATED si el local fue creado exitosamente
+        400 BAD REQUEST si faltan datos obligatorios
+    Body Type: JSON
+    Body:
+    {
+        "id": 3,
+        "name": "Bazar cocina",
+        "floor": "Piso 3"
+    }
+```
+_Actualizar un local existence_
+```
+Request
+    HTTP Verb: PUT
+    URL: /local/v1/api/{id}
+    Headers: Content-Type: application/json
+    Body Type: JSON
+    Body:
+    {
+        "name": "Bazar cocina renovado",
+        "floor": "Piso 3"
+    }
+
+Response
+    HTTP Status:
+        200 OK si el local fue actualizado
+        404 NOT FOUND si no existe un local con ese ID
+        400 BAD REQUEST si el body es inválido
+    Body Type: JSON
+    Body:
+    {
+        "id": 3,
+        "name": "Bazar cocina renovado",
+        "floor": "Piso 3"
+    }
+ 
+```
+_Eliminar un local_
+```
+Request
+    HTTP Verb: DELETE
+    URL: /local/v1/api/{id}
+    Body: None
+
+Response
+    HTTP Status:
+        204 NO CONTENT si el local fue eliminado exitosamente
+        404 NOT FOUND si no existe un local con ese ID
+```
+*Excepciones*
+_Obtener un local por ID inexistente_ 
+```
+Request
+    HTTP Verb: GET
+    URL: /local/v1/api/216
+    Body: None
+
+Response
+    HTTP Status:
+        404 NOT FOUND
+    Body Type: JSON
+    Body:
+    {
+        "status": "NOT_FOUND",
+        "message": "Local with ID 216 not found",
+        "details": [],
+        "timestamp": "2025-09-02T10:25:39.5278943"
+    }
 ```
 
+[[slice-product]]
+*slice /product*
+
+_Obtener lista de productos_
 ```
-request
-	HTTP Verb: GET
-	URI: /api/v1/local
-	Body: None
-response
-	HTTP Status:
-		200 OK if the user is authorized and the Cash Card was successfully retrieved
-		401 UNAUTHORIZED if the user is unauthenticated or unauthorized
-		404 NOT FOUND if the user is authenticated and authorized but the Cash Card cannot be found
-	Body Type: JSON
-	Body:
-	    {
-	      "id": 99,
-	      "amount": 123.45
-	    }
+Request
+    HTTP Verb: GET
+    URL: /product/v1/api
+    Body: None
+
+Response
+    HTTP Status:
+        200 OK si existen productos que mostrar (aunque esté vacío)
+    Body Type: JSON
+    Body:
+    [
+        {
+            "id": 1,
+            "name": "Café molido",
+            "price": 450.0,
+        },
+        {
+            "id": 2,
+            "name": "Té verde",
+            "price": 300.0,
+        }
+    ]
+```
+_Obtener producto por ID_
+```
+Request
+    HTTP Verb: GET
+    URL: /product/v1/api/{id}
+    Body: None
+
+Response
+    HTTP Status:
+        200 OK si el producto existe
+        404 NOT FOUND si no existe un producto con ese ID
+    Body Type: JSON
+    Body:
+    {
+        "id": 1,
+        "name": "Café molido",
+        "price": 450.0,
+    }
+```
+_Crear nuevo producto_
+```
+Request
+    HTTP Verb: POST
+    URL: /product/v1/api
+    Headers: Content-Type: application/json
+    Body Type: JSON
+    Body:
+    {
+        "name": "Chocolate amargo",
+        "price": 600.0,
+    }
+
+Response
+    HTTP Status:
+        201 CREATED si el producto fue creado exitosamente
+        400 BAD REQUEST si faltan datos obligatorios
+    Body Type: JSON
+    Body:
+    {
+        "id": 3,
+        "name": "Chocolate amargo",
+        "price": 600.0,
+    }
+```
+_Actualizar un producto existence_
+```
+Request
+    HTTP Verb: PUT
+    URL: /product/v1/api/{id}
+    Headers: Content-Type: application/json
+    Body Type: JSON
+    Body:
+    {
+        "name": "Chocolate amargo premium",
+        "price": 650.0,
+    }
+
+Response
+    HTTP Status:
+        200 OK si el producto fue actualizado
+        404 NOT FOUND si no existe un producto con ese ID
+        400 BAD REQUEST si el body es inválido
+    Body Type: JSON
+    Body:
+    {
+        "id": 3,
+        "name": "Chocolate amargo premium",
+        "price": 650.0,
+    }
+```
+_Eliminar un producto_
+```
+Request
+    HTTP Verb: DELETE
+    URL: /product/v1/api/{id}
+    Body: None
+
+Response
+    HTTP Status:
+        204 NO CONTENT si el producto fue eliminado exitosamente
+        404 NOT FOUND si no existe un producto con ese ID
+```
+*Excepciones*
+_Obtener un producto por ID inexistente_ 
+```
+Request
+    HTTP Verb: GET
+    URL: /product/v1/api/999
+    Body: None
+
+Response
+    HTTP Status:
+        404 NOT FOUND
+    Body Type: JSON
+    Body:
+    {
+        "status": "NOT_FOUND",
+        "message": "Product with ID 999 not found",
+        "details": [],
+        "timestamp": "2025-09-02T10:25:39.5278943"
+    }
 ```
