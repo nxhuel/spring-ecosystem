@@ -44,8 +44,16 @@ public class ArticleServiceImpl implements ArticleService {
 			switch (key) {
 			case "title" -> updatedArticle.setTitle((String) value);
 			case "description" -> updatedArticle.setDescription((String) value);
-			case "totalPages" -> updatedArticle.setTotalPages((int) value);
-			case "publicationDate" -> updatedArticle.setPublicationDate((LocalDate) value);
+			case "totalPages" -> {
+			    if (value != null) {
+			        updatedArticle.setTotalPages(Integer.parseInt(value.toString()));
+			    };
+			}
+			case "publicationDate" -> {
+				if (value != null && !value.toString().isBlank()) {
+					updatedArticle.setPublicationDate(LocalDate.parse(value.toString()));
+				}
+			}
 			}
 		});
 		
