@@ -6,6 +6,8 @@ spring:
     - dev
 ---
 spring:
+    jackson:
+     time-zone: America/Argentina/Buenos_Aires
     config:
       activate:
         on-profile: dev
